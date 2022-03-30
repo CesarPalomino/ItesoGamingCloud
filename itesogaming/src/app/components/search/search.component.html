@@ -1,0 +1,122 @@
+<div class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-caption">
+          <h1 class="page-title">Buscar Torneos</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-section">
+  <div class="container">
+    <div class="card-block bg-white mb30">
+      <section class="pt-2 pb-2">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 ">
+              <div class="row d-flex align-items-center">
+                <div class="col-6">
+                  <h3 class="font-weight-light"><b>Buscar por Consola</b> </h3>
+                </div>
+                <div class="col-6">
+                  <div class="d-flex justify-content-center h-100">
+                    <div class="searchbar">
+                      <input class="search_input" type="text" name="" placeholder="Buscar...">
+                      <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row justify-content-center ">
+                <div class="icon-btn radius-style">
+                  <button class="btn-pc">
+                    <span class="btn-gradient radius-btn">
+                      <i class="fas fa-desktop"></i>
+                    </span>
+                    <span class="btn-text">PC</span>
+                  </button>
+                  <button class="btn-xbox">
+                    <span class="btn-gradient radius-btn">
+                      <i class="fab fa-xbox"></i>
+                    </span>
+                    <span class="btn-text">Xbox</span>
+                  </button>
+                  <button class="btn-play">
+                    <span class="btn-gradient radius-btn">
+                      <i class="fab fa-playstation"></i>
+                    </span>
+                    <span class="btn-text">PlayStation</span>
+                  </button>
+                  <button class="btn-swtich">
+                    <span class="btn-gradient radius-btn">
+                      <i class="bi bi-nintendo-switch"></i>
+                    </span>
+                    <span class="btn-text">Nintendo</span>
+                  </button>
+                  <button class="btn-other">
+                    <span class="btn-gradient radius-btn">
+                      <i class="fa fa-gamepad" aria-hidden="true"></i>
+                    </span>
+                    <span class="btn-text">Otras</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <app-game-carrousel [title]="juegosName" [list]="juegos"></app-game-carrousel>
+  </div>
+</div>
+
+
+
+<section class="pt-2 pb-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 ">
+        <div class="row d-flex align-items-center">
+          <h3 class="font-weight-light"><b>Todos los eventos</b></h3>
+        </div>
+      </div>
+      <div class="col-12">
+        <app-tourney-card [tourney]="xd"></app-tourney-card>
+        <app-tourney-card [tourney]="maincra"></app-tourney-card>
+        <app-tourney-card [tourney]="dragon"></app-tourney-card>
+        <app-tourney-card [tourney]="mortal"></app-tourney-card>
+        <app-tourney-card [tourney]="smash"></app-tourney-card>
+      </div>
+      <div class="col-12 align-items-center">
+        <div class="demo">
+          <nav class="pagination-outer" aria-label="Page navigation">
+              <ul class="pagination">
+                  <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Previous">
+                          <span aria-hidden="true">«</span>
+                      </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Next">
+                          <span aria-hidden="true">»</span>
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>

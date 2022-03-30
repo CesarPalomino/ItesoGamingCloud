@@ -1,0 +1,38 @@
+<section class="pt-2 pb-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 ">
+        <div class="row d-flex align-items-center">
+          <h4 class="font-weight-light"><b>{{title.titulo}}</b></h4>
+        </div>
+      </div>
+      <div class="col-6 text-right">
+        <!-- <a class="btn mb-3 mr-1 rounded-circle btns-circle-left" href="#carouselExampleIndicators{{dataCarr.ide}}" role="button" data-slide="prev"> -->
+        <a class="btn mb-3 mr-1 rounded-circle btns-circle-left" href="#carouselgames" role="button" data-slide="prev">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+        <!-- <a class="btn mb-3 rounded-circle btns-circle-right" href="#carouselExampleIndicators{{dataCarr.ide}}" role="button" data-slide="next">-->
+        <a class="btn mb-3 rounded-circle btns-circle-right" href="#carouselgames" role="button" data-slide="next">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+      <div class="col-12">
+        <!-- <div id="carouselExampleIndicators{{dataCarr.ide}}" class="carousel slide" data-ride="carousel"> -->
+        <div id="carouselgames" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner w-100 vv-3" role="listbox">
+            <div class="row">
+              <div *ngFor="let item of list; let i=index" [ngClass]="(i==0)?'carousel-item active':'carousel-item'">
+                <div class="col-md-2 mb-2 games" >
+                  <div class="card">
+                    <img class="img-fluid" alt="100%x300" src="{{item.imagen}}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

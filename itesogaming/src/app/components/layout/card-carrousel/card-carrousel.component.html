@@ -1,0 +1,45 @@
+<section class="pt-2 pb-2">
+    <div class="container">
+      <div class="row">
+          <div class="col-6 ">
+            <div class="row d-flex align-items-center">
+                <h2 class="font-weight-light">{{dataCarr.name}}</h2>
+                <a href="{{dataCarr.src}}" class="px-3">Ver Todos</a>                
+              </div>
+          </div>
+          <div class="col-6 text-right">
+            <!-- <a class="btn mb-3 mr-1 rounded-circle btns-circle-left" href="#carouselExampleIndicators{{dataCarr.ide}}" role="button" data-slide="prev"> -->
+              <a class="btn mb-3 mr-1 rounded-circle btns-circle-left" href="#carouselExampleIndicators{{dataCarr.ide}}" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left"></i>
+              </a>
+              <!-- <a class="btn mb-3 rounded-circle btns-circle-right" href="#carouselExampleIndicators{{dataCarr.ide}}" role="button" data-slide="next">-->
+              <a class="btn mb-3 rounded-circle btns-circle-right" href="#carouselExampleIndicators{{dataCarr.ide}}" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right"></i>
+              </a>
+          </div>
+          <div class="col-12">
+            <!-- <div id="carouselExampleIndicators{{dataCarr.ide}}" class="carousel slide" data-ride="carousel"> -->
+              <div id="carouselExampleIndicators{{dataCarr.ide}}" class="carousel slide" data-ride="carousel">
+  
+                  <div class="carousel-inner w-100 vv-3" role="listbox">
+                    <div class="row">
+                      <div *ngFor="let item of list; let i=index" [ngClass]="(i==0)?'carousel-item active':'carousel-item'">
+                        <div class="col-md-3 mb-3">
+                          <div class="card">
+                              <img class="img-fluid" alt="100%x300" src="{{item.imagen}}">
+                              <div class="card-body">
+                                <h4 class="card-title card-tourney-title ">{{item.nombre}}</h4>
+                                <p class="card-title text-center"><i class="{{item.plat}}"></i> {{item.juego}}</p>
+                                <p class="card-text">{{item.fechaI}} - {{item.fechaF}}</p>
+                                <span [ngClass]="(item.status=='Disponible')?'badge badge-pill badge-primary img-spam':((item.status=='Terminado')?'badge badge-pill badge-danger img-spam':'badge badge-pill badge-success img-spam')">{{item.status}}</span>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>

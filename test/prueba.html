@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="prueba.css">
+  <!-- Bootstrap CSS -->}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+  <!-- page-header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="page-caption">
+            <h1 class="page-title">Crear Nuevo Torneo</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.page-header-->
+  <!-- news -->
+  <div class="card-section">
+    <div class="container">
+      <div class="card-block bg-white mb30">
+        <section class="pt-2 pb-2">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 ">
+                <div class="row d-flex align-items-center">
+                  <h4 class="font-weight-light"><b>Juego</b></h4>
+                </div>
+              </div>
+              <div class="col-6 text-right">
+                <!-- <a class="btn mb-3 mr-1 rounded-circle btns-circle-left" href="#carouselExampleIndicators{{dataCarr.ide}}" role="button" data-slide="prev"> -->
+                <a class="btn mb-3 mr-1 rounded-circle btns-circle-left" href="#carouselgames" role="button"
+                  data-slide="prev">
+                  <i class="fas fa-chevron-left"></i>
+                </a>
+                <!-- <a class="btn mb-3 rounded-circle btns-circle-right" href="#carouselExampleIndicators{{dataCarr.ide}}" role="button" data-slide="next">-->
+                <a class="btn mb-3 rounded-circle btns-circle-right" href="#carouselgames" role="button"
+                  data-slide="next">
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </div>
+              <div class="col-12">
+                <!-- <div id="carouselExampleIndicators{{dataCarr.ide}}" class="carousel slide" data-ride="carousel"> -->
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-4 ">
+                <div class="row d-flex align-items-center">
+                  <h4 class="font-weight-light"><b>Consola</b></h4>
+                </div>
+              </div>
+              <div class="col-8">
+                <select class="form-control">
+                  <option>Elegir Consola...</option>
+                  <option>PC</option>
+                  <option>Xbox</option>
+                  <option>PlayStation</option>
+                  <option>Nintendo Switch</option>
+                  <option>Otra (Especificar en descripción)</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-4 ">
+                <div class="row d-flex align-items-center">
+                  <h4 class="font-weight-light"><b>Nombre del Evento</b></h4>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="form-group">
+                  <input type="text" class="form-control formTourney" id="nomTorneo"
+                    placeholder="Ingresa el nombre del torneo..." required>
+                  <div class="invalid-tooltip">
+                    Ingrese un nombre valido
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label># maximo de jugadores</label>
+                <input type="number" class="form-control formTourney" id="numTorneo"
+                  placeholder="Ingrese numero de jugadores" required>
+                <div class="invalid-tooltip">
+                  Ingrese numero de jugadores
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label>Costo</label>
+                <input type="number" class="form-control formTourney" id="precio" placeholder="Ingrese costo" required>
+                <div class="invalid-tooltip">
+                  Costo del evento
+                </div>
+              </div>
+              <div class="col-md-2 mb-3">
+                <label>Fecha de inicio</label>
+                <input type="date" class="form-control formTourney" id="fechaTorneo" required>
+                <div class="invalid-tooltip">
+                  Ingrese una fecha valida
+                </div>
+              </div>
+              <div class="col-md-2 mb-3">
+                <label>Fecha de terminación</label>
+                <input type="date" class="form-control formTourney" id="fechaTorneo" required>
+                <div class="invalid-tooltip">
+                  Ingrese una fecha valida
+                </div>
+              </div>
+              <div class="col-md-2 mb-3">
+                <label>Hora</label>
+                <input type="time" class="form-control formTourney" id="horaTorneo" required>
+                <div class="invalid-tooltip">
+                  Ingrese una hora valida
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Logo para Torneo (Archivo)</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <br>
+                    <input type="text" class="form-control formTourney" id="dirTorneo" placeholder="URL" required>
+                    <div class="invalid-tooltip">No es valido</div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-6 mb-3">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Banner para Torneo (Archivo)</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <br>
+                    <input type="text" class="form-control formTourney" id="dirTorneo" placeholder="URL" required>
+                    <div class="invalid-tooltip">No es valido</div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label>Descripción del evento</label>
+                <label for="exampleFormControlTextarea1" class="form-label" id="descp"
+                  placeholder="Inserte la descripción del evento" required>Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <div class="invalid-tooltip">No es valido</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 mb-3">
+                <label>Dirección (puedes poner online)</label>
+                <input type="text" class="form-control formTourney" id="dirTorneo"
+                  placeholder="indique la dirección del torneo (Ubicacion)" required>
+                <div class="invalid-tooltip">No es valido</div>
+              </div>
+              <div class="col-md-2 mb-3">
+                <br>
+                <button id="controlbtnForm" class="btn btn-primary">Crear Torneo</button>
+              </div>
+            </div>
+          </div>  
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <script src="../back/prueba.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

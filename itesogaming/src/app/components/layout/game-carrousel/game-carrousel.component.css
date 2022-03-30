@@ -1,0 +1,73 @@
+.carousel-inner.vv-3 .carousel-item.active,
+.carousel-inner.vv-3 .carousel-item-next,
+.carousel-inner.vv-3 .carousel-item-prev {
+  display: flex;
+}
+
+.carousel-inner.vv-3 .carousel-item-right.active,
+.carousel-inner.vv-3 .carousel-item-next {
+  transform: translateX(13%);
+}
+
+.carousel-inner.vv-3 .carousel-item-left.active,
+.carousel-inner.vv-3 .carousel-item-prev {
+  transform: translateX(-13%);
+}
+
+.carousel-inner.vv-3 .carousel-item-right,
+.carousel-inner.vv-3 .carousel-item-left {
+  transform: translateX(0);
+}
+
+.col-md-2{
+    background-color: white;
+}
+.card{
+  width: 165px;
+  height: 260px;
+}
+
+.img-spam
+{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.img-fluid{
+  width: 300px;
+  height: 500px;
+}
+
+.card-tourney-title{
+  height: 55px;
+  text-align: center;
+}
+
+.card-text{
+  font-size: 13px !important;
+  text-align: center;
+}
+.btns-circle-left {
+    background-color: white;
+    color: rgb(57, 70, 143);
+    width: 30px;
+    height: 30px;
+    padding: 5px 8px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.33;
+    border-radius: 25px;
+  }
+
+.btns-circle-right {
+    background-color: white;
+    color: rgb(57, 70, 143);
+    width: 30px;
+    height: 30px;
+    padding: 5px 8px;
+    text-align: right;
+    font-size: 15px;
+    line-height: 1.33;
+    border-radius: 25px;
+  }

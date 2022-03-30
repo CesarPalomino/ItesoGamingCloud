@@ -1,0 +1,26 @@
+.img-fluid{
+    width: 145px;
+    height: 145px;
+    padding:5px;
+}
+
+.col-md-2{
+    padding: 0 0 0 18px;
+}
+
+.card-text{
+    margin: 0 0 5px;;
+}
+
+.text-muted{
+    margin: 0 0 5px;;
+}
+
+
+.img-spam
+{
+    position: absolute;
+    font-size: medium;
+    top: 8px;
+    right: 12px;
+}
