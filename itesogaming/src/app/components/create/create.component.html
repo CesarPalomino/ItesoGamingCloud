@@ -1,0 +1,142 @@
+<!-- page-header -->
+<div class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-caption">
+          <h1 class="display-4"><b>Crear Nuevo Torneo</b></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.page-header-->
+<!-- news -->
+<div class="card-section">
+  <div class="container">
+    <div class="card-block bg-white mb30">
+      <section class="pt-2 pb-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 ">
+                <app-game-carrousel [title]="juegosName" [list]="juegos"></app-game-carrousel>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-4 ">
+              <div class="row d-flex align-items-center">
+                <h4 class="font-weight-light"><b>Consola</b></h4>
+              </div>
+            </div>
+            <div class="col-8">
+              <select class="form-control">
+                <option>Elegir Consola...</option>
+                <option>PC</option>
+                <option>Xbox</option>
+                <option>PlayStation</option>
+                <option>Nintendo Switch</option>
+                <option>Otra (Especificar en descripción)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-4 ">
+              <div class="row d-flex align-items-center">
+                <h4 class="font-weight-light"><b>Nombre del Evento</b></h4>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="form-group">
+                <input type="text" class="form-control formTourney" id="nomTorneo"
+                  placeholder="Ingresa el nombre del torneo..." required>
+                <div class="invalid-tooltip">
+                  Ingrese un nombre valido
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label># maximo de jugadores</label>
+              <input type="number" class="form-control formTourney" id="numTorneo"
+                placeholder="Ingrese numero de jugadores" required>
+              <div class="invalid-tooltip">
+                Ingrese numero de jugadores
+              </div>
+            </div>
+            <div class="col-md-2 mb-3">
+              <label>Costo</label>
+              <input type="number" class="form-control formTourney" id="precio" placeholder="Ingrese costo" required>
+              <div class="invalid-tooltip">
+                Costo del evento
+              </div>
+            </div>
+            <div class="col-md-2 mb-3">
+              <label>Fecha de inicio</label>
+              <input type="date" class="form-control formTourney" id="fechaTorneo" required>
+              <div class="invalid-tooltip">
+                Ingrese una fecha valida
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label>Fecha de terminación</label>
+              <input type="date" class="form-control formTourney" id="fechaTorneo" required>
+              <div class="invalid-tooltip">
+                Ingrese una fecha valida
+              </div>
+            </div>
+            <div class="col-md-2 mb-3">
+              <label>Hora</label>
+              <input type="time" class="form-control formTourney" id="horaTorneo" required>
+              <div class="invalid-tooltip">
+                Ingrese una hora valida
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlFile1">Logo para Torneo</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  <br>
+                  <input type="text" class="form-control formTourney" id="dirTorneo" placeholder="URL" required>
+                  <div class="invalid-tooltip">No es valido</div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-6 mb-3">
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlFile1">Banner para Torneo</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  <br>
+                  <input type="text" class="form-control formTourney" id="dirTorneo" placeholder="URL" required>
+                  <div class="invalid-tooltip">No es valido</div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mb-3">
+              <label placeholder="Inserte la descripción del evento" required>Descripción del evento</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <div class="invalid-tooltip">No es valido</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10 mb-3">
+              <label>Dirección (puedes poner online)</label>
+              <input type="text" class="form-control formTourney" id="dirTorneo"
+                placeholder="indique la dirección del torneo (Ubicacion)" required>
+              <div class="invalid-tooltip">No es valido</div>
+            </div>
+            <div class="col-md-2 mb-3">
+              <br>
+              <button id="controlbtnForm" class="btn btn-primary">Crear Torneo</button>
+            </div>
+          </div>
+        </div>

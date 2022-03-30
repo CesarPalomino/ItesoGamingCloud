@@ -8,8 +8,13 @@
     padding: 0 0 0 18px;
 }
 
+.link-text{
+    color: black;
+  }
+
 .card-text{
     margin: 0 0 5px;;
+    color: black;
 }
 
 .text-muted{

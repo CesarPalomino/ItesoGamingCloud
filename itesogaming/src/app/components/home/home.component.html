@@ -6,15 +6,17 @@
       <!-- Slide One - Set the background image for this slide in the line below -->
       <div *ngFor="let item of destacados; let i=index" [ngClass]="(i==0)?'carousel-item active':'carousel-item'"
         style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('{{item.imagen}}') ">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4 ">{{item.nombre}}</h3>
-          <h5 class="display-6"><i
-              [ngClass]="(item.plat=='PC')?'fas fa-desktop':((item.plat=='Xbox')?'fab fa-xbox':((item.plat=='PlayStation')?'fab fa-playstation':((item.plat=='Nintendo')?'bi bi-nintendo-switch':'fa fa-gamepad')))"></i>
-            {{item.juego}}</h5>
-          <p class="lead">{{item.fechaI}} - {{item.fechaF}}</p>
-          <span
-            [ngClass]="(item.status=='Disponible')?'badge badge-pill badge-primary':((item.status=='Terminado')?'badge badge-pill badge-danger':'badge badge-pill badge-success')">{{item.status}}</span>
-        </div>
+        <a href="{{item.link}}">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="display-4"><b>{{item.nombre}}</b></h3>
+            <h5 class="display-6"><i
+                [ngClass]="(item.plat=='PC')?'fas fa-desktop':((item.plat=='Xbox')?'fab fa-xbox':((item.plat=='PlayStation')?'fab fa-playstation':((item.plat=='Nintendo')?'bi bi-nintendo-switch':'fa fa-gamepad')))"></i>
+              {{item.juego}}</h5>
+            <p class="lead">{{item.fechaI}} - {{item.fechaF}}</p>
+            <span
+              [ngClass]="(item.status=='Disponible')?'badge badge-pill badge-primary':((item.status=='Terminado')?'badge badge-pill badge-danger':'badge badge-pill badge-success')">{{item.status}}</span>
+          </div>
+        </a>
       </div>
       <!-- /Carrousel -->
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
