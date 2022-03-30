@@ -1,59 +1,58 @@
-
 <header>
   <!-- Torneos Destacados -->
-    <div id="carouselExampleIndicators" class="carousel slide"  data-ride="carousel">
-      <!-- Carrousel -->
-      <div class="carousel-inner" role="listbox">
-        <!-- Slide One - Set the background image for this slide in the line below -->
-        <div  *ngFor="let item of destacados; let i=index" [ngClass]="(i==0)?'carousel-item active':'carousel-item'"style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('{{item.imagen}}') ">
-          <div class="carousel-caption d-none d-md-block" >
-            <h3 class="display-4 ">{{item.nombre}}</h3>
-            <h5 class="display-6"><i class="{{item.plat}}"></i> {{item.juego}}</h5>
-            <p class="lead">{{item.fechaI}} - {{item.fechaF}}</p>
-            <span [ngClass]="(item.status=='Disponible')?'badge badge-pill badge-primary':((item.status=='Terminado')?'badge badge-pill badge-danger':'badge badge-pill badge-success')">{{item.status}}</span>
-          </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <!-- Carrousel -->
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div *ngFor="let item of destacados; let i=index" [ngClass]="(i==0)?'carousel-item active':'carousel-item'"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('{{item.imagen}}') ">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4 ">{{item.nombre}}</h3>
+          <h5 class="display-6"><i
+              [ngClass]="(item.plat=='PC')?'fas fa-desktop':((item.plat=='Xbox')?'fab fa-xbox':((item.plat=='PlayStation')?'fab fa-playstation':((item.plat=='Nintendo')?'bi bi-nintendo-switch':'fa fa-gamepad')))"></i>
+            {{item.juego}}</h5>
+          <p class="lead">{{item.fechaI}} - {{item.fechaF}}</p>
+          <span
+            [ngClass]="(item.status=='Disponible')?'badge badge-pill badge-primary':((item.status=='Terminado')?'badge badge-pill badge-danger':'badge badge-pill badge-success')">{{item.status}}</span>
         </div>
+      </div>
       <!-- /Carrousel -->
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
-  </header>
+</header>
 
-  <app-card-carrousel [dataCarr]="proximosTitle" [list]="proximosList"></app-card-carrousel>
+<app-card-carrousel [dataCarr]="proximosTitle" [list]="proximosList"></app-card-carrousel>
 
-  <app-card-carrousel [dataCarr]="GratisTitle" [list]="GratisList"></app-card-carrousel>
+<app-card-carrousel [dataCarr]="GratisTitle" [list]="GratisList"></app-card-carrousel>
 
-  <app-card-carrousel [dataCarr]="recientesTitle" [list]="recientesList"></app-card-carrousel>
+<app-card-carrousel [dataCarr]="recientesTitle" [list]="recientesList"></app-card-carrousel>
 
-  <app-card-carrousel [dataCarr]="ProcessTitle" [list]="ProcessList"></app-card-carrousel>
+<app-card-carrousel [dataCarr]="ProcessTitle" [list]="ProcessList"></app-card-carrousel>
 
-  <app-card-carrousel [dataCarr]="FinishTitle" [list]="FinishList"></app-card-carrousel>
+<app-card-carrousel [dataCarr]="FinishTitle" [list]="FinishList"></app-card-carrousel>
 
-  <footer class="text-center text-white" style="background-color: #45637d;">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!-- Section: Iframe -->
-      <section class="">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-6">
-            <div class="ratio ratio-16x9">
-              <iframe
-                class="shadow-1-strong rounded"
-                src="https://www.youtube.com/embed/GTUOwqDPgKI"
-                title="YouTube video"
-                allowfullscreen
-              ></iframe>
-            </div>
+<footer class="text-center text-white" style="background-color: #45637d;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Iframe -->
+    <section class="">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+          <div class="ratio ratio-16x9">
+            <iframe class="shadow-1-strong rounded" src="https://www.youtube.com/embed/GTUOwqDPgKI"
+              title="YouTube video" allowfullscreen></iframe>
           </div>
         </div>
-      </section>
-      <!-- Section: Iframe -->
-    </div>
-    <!-- Grid container -->
+      </div>
+    </section>
+    <!-- Section: Iframe -->
+  </div>
+  <!-- Grid container -->
