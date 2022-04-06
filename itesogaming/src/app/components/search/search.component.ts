@@ -52,11 +52,11 @@ export class SearchComponent implements OnInit {
 
   sus: any = {nombre: "SuS",juego: "Among Us",fechaI: "19/07/2025",fechaF: "20/07/2025",plat: "PC",status: "En Curso",logo: "https://static.wikia.nocookie.net/ddb79a0c-2765-4d26-b56a-76c0d2b5f9db",costo: 0,ubicacion: "Online",hora: "15:00"}
 
-  return: any = {nombre: "De regreso al 2002",juego: "KOV XV",fechaI: "27/06/2022",fechaF: "30/06/2022",plat: "PlayStation",status: "En Curso",logo: "https://pbs.twimg.com/media/FMDbgRTX0AM4Tnk.jpg:large",costo: 5,ubicacion: "Casa del Kennet",hora: "10:00"}
+  return: any = {nombre: "De Regreso al 2002",juego: "KOV XV",fechaI: "27/06/2022",fechaF: "30/06/2022",plat: "PlayStation",status: "En Curso",logo: "https://pbs.twimg.com/media/FMDbgRTX0AM4Tnk.jpg:large",costo: 5,ubicacion: "Casa del Kennet",hora: "10:00"}
 
   rock: any = {nombre: "Let's Metal",juego: "Guitly Gear Strive",fechaI: "15/11/2046",fechaF: "01/12/2046",plat: "PlayStation",status: "Disponible",logo: "https://p325k7wa.twic.pics/high/guilty-gear/01-guilty-gear-strive/03-characters-gallery/sol_icon.jpg?twic=v1/cover=180x180/step=10/quality=80",costo: 250,ubicacion: "Hell & Heaven Bar",hora: "19:00"}
 
-  rugal: any = {nombre: "Usar a Rugar es de...",juego: "KOV 2002",fechaI: "18/06/2002",fechaF: "24/07/2002",plat: "Otro",status: "Terminado",logo: "https://lh3.googleusercontent.com/rXLEYxOSminn7le7qcIUUgQBWLHcx6QWqC1xTcQEBzeZvAGqCEisiEmBnpjyXLEV4BQ=w300",costo: 69,ubicacion: "En la casa del Español",hora: "22:00"}
+  rugal: any = {nombre: "Usar a Rugal es de...",juego: "KOV 2002",fechaI: "18/06/2002",fechaF: "24/07/2002",plat: "Otro",status: "Terminado",logo: "https://lh3.googleusercontent.com/rXLEYxOSminn7le7qcIUUgQBWLHcx6QWqC1xTcQEBzeZvAGqCEisiEmBnpjyXLEV4BQ=w300",costo: 69,ubicacion: "En la casa del Español",hora: "22:00"}
 
   melee: any = {nombre: "Melee Cup",juego: "Smash Bros Melee",fechaI: "28/12/2012",fechaF: "13/01/2013",plat: "Otro",status: "Terminado",logo: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ef02abe3-63cc-4dfa-8eab-5543cf3bcf4f/dadt5p4-8aa907b7-ddff-4ec9-a98c-26d66119a0b4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VmMDJhYmUzLTYzY2MtNGRmYS04ZWFiLTU1NDNjZjNiY2Y0ZlwvZGFkdDVwNC04YWE5MDdiNy1kZGZmLTRlYzktYTk4Yy0yNmQ2NjExOWEwYjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.46BHY1FCflyfvEZRS7m4WL-9kGFE6mfraBD-kdffuY4",costo: 100,ubicacion: "La Frikiplaza",hora: "13:00"}
   constructor() {}

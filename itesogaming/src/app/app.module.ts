@@ -11,6 +11,8 @@ import { SearchComponent } from './components/search/search.component';
 import { GameCarrouselComponent } from './components/layout/game-carrousel/game-carrousel.component';
 import { TourneyCardComponent } from './components/layout/tourney-card/tourney-card.component';
 import { CreateComponent } from './components/create/create.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './components/layout/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,14 @@ import { CreateComponent } from './components/create/create.component';
     SearchComponent,
     GameCarrouselComponent,
     TourneyCardComponent,
-    CreateComponent
+    CreateComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

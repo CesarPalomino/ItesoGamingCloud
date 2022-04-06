@@ -1,0 +1,155 @@
+/* Made with love by Mutiullah Samim*/
+
+.container{
+    height: 100%;
+    align-content: center;
+    }
+    
+    .card{
+    height: 495px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.884) !important;
+    }
+    
+    .card-body{
+        padding-left: 65px!important;
+        padding-right: 65px!important;
+    }
+    
+    .close{
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+    
+    .card-header h3{
+    color: black;
+    }
+    
+    .input-group-prepend span{
+    width: 50px;
+    background-color: rgb(19, 51, 110);
+    color: white;
+    border:0 !important;
+    }
+    
+    input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    
+    }
+    
+    .remember{
+    color: black;
+    }
+    
+    .remember input
+    {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+    }
+    
+    .login_btn{
+    color: white;
+    background-color: rgb(19, 51, 110);
+    width: 100px;
+    }
+    
+    .login_btn:hover{
+    color: black;
+    background-color: white;
+    }
+    
+    .d-grid{
+        margin-top: 15px;
+    }
+    
+    .links{
+    color: black;
+    }
+    
+    .links a{
+    margin-left: 4px;
+    }
+    
+    
+    .icon-btn{
+        float:left;
+        font-size: 20px;
+    }
+    
+    .icon-btn button{
+        float:left;
+        margin:10px;
+        border-radius: 8px;
+    }
+    
+    .btn-gradient {    
+        width:25%;
+        position: relative;
+        display: inline-block;
+        left:-51px;
+        background: rgba(0, 0, 0, 0.15);
+        border-top-left-radius: 11px;
+        border-bottom-left-radius: 11px;
+        border-top-right-radius: 60px;
+        padding: 8px 24px 8px 16px;
+        box-shadow: 2px 0px 0px 0px rgba(78, 72, 72, 0.4);
+        font-size: 18px;
+        
+    
+    }
+    
+    .btn-gradient-2 {    
+        width:26%;
+        position: relative;
+        display: inline-block;
+        left:-54px;
+        background: rgba(0, 0, 0, 0.15);
+        border-top-left-radius: 11px;
+        border-bottom-left-radius: 11px;
+        border-top-right-radius: 60px;
+        padding: 8px 24px 8px 16px;
+        box-shadow: 2px 0px 0px 0px rgba(78, 72, 72, 0.4);
+        font-size: 18px;
+    }
+    
+    .btn-facebook{
+        font-size:15px;
+        padding:0px 20px;
+        background-color: rgb(22, 73, 168);
+        color: white;
+        border:none;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width:300px;
+    }
+    
+    .btn-facebook:hover{
+        background-color: white;
+        color: rgb(22, 73, 168);
+    }
+    
+    .btn-google{
+        font-size:16px;
+        padding:0px 20px;
+        background-color: rgb(216, 48, 48);
+        color: white;
+        border:none;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width:300px;
+    }
+    
+    .btn-google:hover{
+        background-color: white;
+        color: rgb(212, 42, 42);
+     }
+    
+    
