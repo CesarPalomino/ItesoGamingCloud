@@ -3,7 +3,7 @@
       <div class="row">
           <div class="col-6 ">
             <div class="row d-flex align-items-center">
-                <h2 class="font-weight-light">{{dataCarr.name}}</h2>
+                <h3 class="font-weight-light"><b>{{dataCarr.name}}</b></h3>
                 <a href="{{dataCarr.src}}" class="px-3">Ver Todos</a>                
               </div>
           </div>
@@ -25,15 +25,19 @@
                     <div class="row">
                       <div *ngFor="let item of list; let i=index" [ngClass]="(i==0)?'carousel-item active':'carousel-item'">
                         <div class="col-md-3 mb-3">
-                          <div class="card">
+                          <a href="{{item.link}}">
+                            <div class="card">
                               <img class="img-fluid" alt="100%x300" src="{{item.imagen}}">
                               <div class="card-body">
-                                <h4 class="card-title card-tourney-title ">{{item.nombre}}</h4>
-                                <p class="card-title text-center"><i class="{{item.plat}}"></i> {{item.juego}}</p>
+                                <h4 class="card-title card-tourney-title link-text">{{item.nombre}}</h4>
+                                <p class="card-title text-center link-text"><i
+                                  [ngClass]="(item.plat=='PC')?'fas fa-desktop':((item.plat=='Xbox')?'fab fa-xbox':((item.plat=='PlayStation')?'fab fa-playstation':((item.plat=='Nintendo')?'bi bi-nintendo-switch':'fa fa-gamepad')))"></i>
+                                {{item.juego}}</p>
                                 <p class="card-text">{{item.fechaI}} - {{item.fechaF}}</p>
                                 <span [ngClass]="(item.status=='Disponible')?'badge badge-pill badge-primary img-spam':((item.status=='Terminado')?'badge badge-pill badge-danger img-spam':'badge badge-pill badge-success img-spam')">{{item.status}}</span>
                               </div>
                             </div>
+                          </a>
                         </div>
                       </div>
                   </div>

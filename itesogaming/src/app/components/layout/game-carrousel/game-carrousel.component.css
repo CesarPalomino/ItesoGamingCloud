@@ -19,23 +19,17 @@
   transform: translateX(0);
 }
 
-.col-md-2{
-    background-color: white;
-}
-.card{
-  width: 165px;
-  height: 260px;
+.game-link{
+  background-color: white;
 }
 
-.img-spam
-{
-    position: absolute;
-    top: 8px;
-    right: 16px;
+.card{
+  width: 155px;
+  height: 240px;
 }
 
 .img-fluid{
-  width: 300px;
+  width: 400px;
   height: 500px;
 }
 

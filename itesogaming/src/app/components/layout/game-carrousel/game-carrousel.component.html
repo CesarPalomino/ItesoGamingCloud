@@ -16,17 +16,19 @@
           <i class="fas fa-chevron-right"></i>
         </a>
       </div>
-      <div class="col-12">
+      <div class="col-lg-12">
         <!-- <div id="carouselExampleIndicators{{dataCarr.ide}}" class="carousel slide" data-ride="carousel"> -->
         <div id="carouselgames" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner w-100 vv-3" role="listbox">
             <div class="row">
               <div *ngFor="let item of list; let i=index" [ngClass]="(i==0)?'carousel-item active':'carousel-item'">
-                <div class="col-md-2 mb-2 games" >
-                  <div class="card">
-                    <img class="img-fluid" alt="100%x300" src="{{item.imagen}}">
+                <a href="{{item.link}}" class="game-link" >
+                  <div class="col-md-2 mb-2 games" >
+                    <div class="card">
+                      <img class="img-fluid" alt="100%x300" src="{{item.imagen}}">
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>

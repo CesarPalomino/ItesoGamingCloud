@@ -1,0 +1,12 @@
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; letter-spacing: 0px; font-size: 17px; color: #8d8f90; font-weight: 400; line-height: 32px; background-color: #edefef; }
+
+
+
+
+.page-header { background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(https://scontent-qro1-1.xx.fbcdn.net/v/t1.6435-9/30742069_10156549708754905_2339310592680001536_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8631f5&_nc_ohc=DW3HVmTRz20AX-T2a69&_nc_ht=scontent-qro1-1.xx&oh=00_AT8gEMd-hrG14L_8BGShoi5_BT98jZzZSlVA6jLWvnPt0g&oe=62692B23)no-repeat; position: relative; background-position-y: center; ; background-size: cover; max-height: 720px; }
+.page-caption { padding-top: 120px; padding-bottom: 110px; }
+.display-4 { font-size: 65px; line-height: 1; color: #fff;; text-align: center; }
+
+.card-section { position: relative; bottom: 60px; }
+.card-block { padding: 40px 80px 10px 80px; }
+.section-title { margin-bottom: 60px; }

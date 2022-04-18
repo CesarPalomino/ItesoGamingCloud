@@ -18,9 +18,18 @@
 .carousel-inner.vv-3 .carousel-item-left {
   transform: translateX(0);
 }
+
 .card{
   width: 210px;
   height: 275px;
+}
+
+.link-text{
+  color: black;
+}
+
+.cart-date{
+  color: rgb(48, 48, 48);
 }
 
 .img-spam
@@ -43,6 +52,7 @@
 .card-text{
   font-size: 13px !important;
   text-align: center;
+  color: rgb(87, 87, 87);
 }
 .btns-circle-left {
     background-color: white;

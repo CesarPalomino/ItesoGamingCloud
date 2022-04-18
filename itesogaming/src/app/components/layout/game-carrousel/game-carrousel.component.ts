@@ -27,7 +27,7 @@ export class GameCarrouselComponent implements OnInit {
             next = $(element).siblings(':first');
         }
         next.children(':first-child').clone().appendTo($(element));
-        for (var i = 0; i < 6; i++) {
+        for (var i = 0; i < 13; i++) {
             next = next.next();
             if (!next.length) {
                 next = $(element).siblings(':first');

@@ -1,0 +1,116 @@
+<ng-template #login let-modal>
+  <div class="modal-header">
+    <h3><b><i class="bi bi-controller"></i></b> Iniciar Sesión</h3>
+    <button type="button" class="close" (click)="modal.close('Close click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="input-group form-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-user"></i></span>
+        </div>
+        <input type="text" class="form-control" placeholder="Nombre de Usuario">
+
+      </div>
+      <div class="input-group form-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-key"></i></span>
+        </div>
+        <input type="password" class="form-control" placeholder="Contraseña">
+      </div>
+      <div class="row align-items-center remember">
+        <input type="checkbox">Recordar Contraseña
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Login" (click)="modal.close('Save click')" class="btn float-right login_btn">
+      </div>
+    </form>
+    <br>
+    <div class="d-grid col-12 mx-auto ">
+      <!--<button type="button" class="btn btn-facebook"><i class="bi bi-facebook"> </i> Login con Facebook</i></button>
+            <button type="button" class="btn btn-google"><i class="fab fa-google"></i> Login con Google</i></button>-->
+      <div class="icon-btn radius-style">
+        <button class="btn-facebook" (click)="modal.close('Save click')">
+          <span class="btn-gradient radius-btn">
+            <i class="bi bi-facebook"></i>
+          </span>
+          <span class="btn-text">Login con Facebook</span>
+        </button>
+        <button class="btn-google" (click)="modal.close('Save click')"> 
+          <span class="btn-gradient-2 radius-btn">
+            <i class="fab fa-google"></i>
+          </span>
+          <span class="btn-text">Login con Google</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="d-flex justify-content-center links">
+      ¿No tienes cuenta?<a href="" (click)="open(register)" (click)="modal.close('Close click')" onclick="return false">Registrate</a>
+    </div>
+    <div class="d-flex justify-content-center">
+      <a href="https://i.ytimg.com/vi/gwQ3RduTHWc/mqdefault.jpg">¿Olvidaste tu contraseña?</a>
+    </div>
+</div>
+</ng-template>
+
+<ng-template #register let-modal>
+  <div class="modal-header">
+    <h3><b><i class="bi bi-joystick"></i></b> Registrarse</h3>
+    <button type="button" class="close" (click)="modal.close('Close click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="input-group form-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-user"></i></span>
+        </div>
+        <input type="mail" class="form-control" placeholder="Nombre de Usuario">
+
+      </div>
+      <div class="input-group form-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa fa-envelope"></i></span>
+        </div>
+        <input type="password" class="form-control" placeholder="Correo Electronico">
+      </div>
+      <div class="input-group form-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-key"></i></span>
+        </div>
+        <input type="password" class="form-control" placeholder="Contraseña">
+      </div>
+      <div class="input-group form-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-key"></i></span>
+        </div>
+        <input type="password" class="form-control" placeholder="Repetir Contraseña">
+      </div>
+      <div class="form-group" (click)="modal.close('Save click')">
+        <input type="submit" value="Registrarse" class="btn float-right login_btn">
+      </div>
+    </form>
+    <br>
+  </div>
+  <div class="card-footer">
+    <div class="d-flex justify-content-center links">
+      ¿Ya tienes cuenta?<a href="" (click)="open(login)" (click)="modal.close('Close click')" onclick="return false">Inicia Sesión</a>
+    </div>
+    <div class="d-flex justify-content-center">
+      <a href="https://i.ytimg.com/vi/gwQ3RduTHWc/mqdefault.jpg">¿Olvidaste tu contraseña?</a>
+    </div>
+  </div>
+</ng-template>
+
+
+
+
+<li class="nav-item">
+  <a class="nav-link" (click)="open(login)"><i class="fas fa-user-circle fa-lg"></i>
+    User</a>
+</li>
