@@ -11,7 +11,13 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  active(content: any) {
+    
+   }
+
   ngOnInit(): void {
   }
+
+
 
 }

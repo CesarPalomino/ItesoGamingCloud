@@ -167,6 +167,6 @@ li {
     background: linear-gradient(45deg, rgb(19, 51, 110) 48%, #1b1e21 48%);
 }
 
-  /*.header-bg{
-    background-color: rgb(19, 51, 110);
-}*/
+  .xd{
+    color: rgb(19, 51, 110);
+}

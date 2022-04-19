@@ -12,7 +12,7 @@
               <p class="card-text"> {{(tourney.costo==0)? "Entrada Gratis" : "Costo de Inscripción: $"+(tourney.costo | number)}}</p>
               <div class="row">
                 <div class="col-md-6">
-                  <p class="card-text"><small class="text-muted">{{tourney.fechaI}} - {{tourney.fechaF}}</small></p>
+                  <p class="card-text"><small class="text-muted">{{(tourney.fechaI==tourney.fechaF)? tourney.fechaI : tourney.fechaI +" - "+ tourney.fechaF}}</small></p>
                 </div>
                 <div class="col-md-3">
                   <p class="card-text"><small class="text-muted">{{tourney.hora}} horas</small></p>

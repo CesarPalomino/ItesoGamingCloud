@@ -33,7 +33,7 @@
                                 <p class="card-title text-center link-text"><i
                                   [ngClass]="(item.plat=='PC')?'fas fa-desktop':((item.plat=='Xbox')?'fab fa-xbox':((item.plat=='PlayStation')?'fab fa-playstation':((item.plat=='Nintendo')?'bi bi-nintendo-switch':'fa fa-gamepad')))"></i>
                                 {{item.juego}}</p>
-                                <p class="card-text">{{item.fechaI}} - {{item.fechaF}}</p>
+                                <p class="card-text">{{(item.fechaI==item.fechaF)? item.fechaI : item.fechaI +" - "+ item.fechaF}}</p>
                                 <span [ngClass]="(item.status=='Disponible')?'badge badge-pill badge-primary img-spam':((item.status=='Terminado')?'badge badge-pill badge-danger img-spam':'badge badge-pill badge-success img-spam')">{{item.status}}</span>
                               </div>
                             </div>

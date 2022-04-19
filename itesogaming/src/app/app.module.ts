@@ -13,6 +13,7 @@ import { TourneyCardComponent } from './components/layout/tourney-card/tourney-c
 import { CreateComponent } from './components/create/create.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './components/layout/modal/modal.component';
+import { TourneyComponent } from './components/tourney/tourney.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ModalComponent } from './components/layout/modal/modal.component';
     GameCarrouselComponent,
     TourneyCardComponent,
     CreateComponent,
-    ModalComponent
+    ModalComponent,
+    TourneyComponent
   ],
   imports: [
     BrowserModule,

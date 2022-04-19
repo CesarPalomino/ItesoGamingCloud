@@ -50,7 +50,7 @@ export class SearchComponent implements OnInit {
 
   smash: any = {nombre: "Smash Cup",juego: "Super Smash Bros",fechaI: "14/02/2030",fechaF: "16/02/2030",plat: "Nintendo",status: "Disponible",logo: "https://cdn.vox-cdn.com/thumbor/m43bhBuTlrUok97DZv4tMjI5lzg=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/10387783/Screen_Shot_2018-03-08_at_5.33.48_PM.0.png",costo: 0,ubicacion: "ITESO",hora: "17:00"}
 
-  sus: any = {nombre: "SuS",juego: "Among Us",fechaI: "19/07/2025",fechaF: "20/07/2025",plat: "PC",status: "En Curso",logo: "https://static.wikia.nocookie.net/ddb79a0c-2765-4d26-b56a-76c0d2b5f9db",costo: 0,ubicacion: "Online",hora: "15:00"}
+  sus: any = {nombre: "SuS",juego: "Among Us",fechaI: "19/07/2025",fechaF: "19/07/2025",plat: "PC",status: "En Curso",logo: "https://static.wikia.nocookie.net/ddb79a0c-2765-4d26-b56a-76c0d2b5f9db",costo: 0,ubicacion: "Online",hora: "15:00"}
 
   return: any = {nombre: "De Regreso al 2002",juego: "KOV XV",fechaI: "27/06/2022",fechaF: "30/06/2022",plat: "PlayStation",status: "En Curso",logo: "https://pbs.twimg.com/media/FMDbgRTX0AM4Tnk.jpg:large",costo: 5,ubicacion: "Casa del Kennet",hora: "10:00"}
 

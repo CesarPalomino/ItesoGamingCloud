@@ -12,7 +12,7 @@
             <h5 class="display-6"><i
                 [ngClass]="(item.plat=='PC')?'fas fa-desktop':((item.plat=='Xbox')?'fab fa-xbox':((item.plat=='PlayStation')?'fab fa-playstation':((item.plat=='Nintendo')?'bi bi-nintendo-switch':'fa fa-gamepad')))"></i>
               {{item.juego}}</h5>
-            <p class="lead">{{item.fechaI}} - {{item.fechaF}}</p>
+            <p class="lead">{{(item.fechaI==item.fechaF)? item.fechaI : item.fechaI +" - "+ item.fechaF}}</p>
             <span
               [ngClass]="(item.status=='Disponible')?'badge badge-pill badge-primary':((item.status=='Terminado')?'badge badge-pill badge-danger':'badge badge-pill badge-success')">{{item.status}}</span>
           </div>
