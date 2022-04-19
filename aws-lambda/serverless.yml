@@ -1,0 +1,85 @@
+service: aws-lambda
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action: 
+        - dynamodb:*
+      Resource:
+        - arn:aws:dynamodb:us-east-1:253879796894:table/Users
+        - arn:aws:dynamodb:us-east-1:253879796894:table/Tourney
+
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
+  addUser:
+    handler: src/user.addUser
+    events:
+      - httpApi:
+          path: /addUser
+          method: post
+  getUsers:
+    handler: src/user.getUsers
+    events:
+      - httpApi:
+          path: /getUsers
+          method: get
+  getUserByID:
+    handler: src/user.getUserByID
+    events:
+      - httpApi:
+          path: /getUserByID/{id}
+          method: get
+  #Metodos de torneo
+  createTourney:
+    handler: src/tourney.createTourney
+    events:
+      - httpApi:
+          path: /createTourney
+          method: post
+  getTourney:
+    handler: src/tourney.getTourney
+    events:
+      - httpApi:
+          path: /getTourney
+          method: get        
+  getTourneyByID:
+    handler: src/tourney.getTourneyByID
+    events:
+      - httpApi:
+          path: /getTourneyByID/{id}
+          method: get
+
+
+resources:
+  Resources:
+    Users:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Users
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions: 
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+    Tourney:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Tourney
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions: 
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
