@@ -14,6 +14,7 @@ import { CreateComponent } from './components/create/create.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './components/layout/modal/modal.component';
 import { TourneyComponent } from './components/tourney/tourney.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TourneyComponent } from './components/tourney/tourney.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

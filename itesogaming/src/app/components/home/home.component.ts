@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-home',
@@ -55,9 +56,21 @@ export class HomeComponent implements OnInit {
   {nombre:"Mortal Campionship",juego:"Mortal Mortal 11",fechaI:"10/12/2040",fechaF:"18/12/2040",plat:"PlayStation",status:"En Curso",link: "#",imagen:"https://fanaticosdelhardware.com/wp-content/uploads/2019/04/Mortal-Kombat-11-FDH.jpg"},
   {nombre:"Smash Cup",juego:"Super Smash Bros",fechaI:"14/02/2030",fechaF:"16/02/2030",plat:"Nintendo",status:"Disponible",link: "#",imagen:"https://revistamorcego.com/wp-content/uploads/2020/10/dda7ilv-f4a7d3c8-0e71-4d87-9a4c-6637a32016af.png"},]
 
-  constructor() { }
+  constructor(
+    private service :DatabaseService
+  ) { }
 
+  users = []
   ngOnInit(): void {
+    this.getUsers()
   }
   
+  getUsers(){
+    this.service.getAllUsers().subscribe(
+      response=>{
+        console.log(response)
+      }
+    )
+  }
+
 }
