@@ -1,0 +1,59 @@
+<ng-template #user let-modal>
+    <div class="modal-body ">
+        <button type="button" class="close" (click)="modal.close('Close click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+        </div>
+            <br>
+            <div class="user text-center">
+              <div class="profile"> <img src="https://randomuser.me/api/portraits/men/4.jpg" class="rounded-circle img-thumbnail"
+                  width="150"> </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col-1 ">
+                  
+              </div>
+              <div class="col-10">
+                <div class="mt-5 text-center">
+                  <h4 class="mb-0">OscarRex</h4> <span class="text-muted d-block mb-2">oscar777@nft</span> <button
+                    class="btn btn-outline-dark btn-sm follow">Editar Perfil</button>
+                  <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+                    <div class="stats">
+                      <br>
+                    </div>
+                    <div class="stats">
+                      <h6 class="mb-0">Torneos Inscritos</h6> <span>142</span>
+                    </div>
+                    <div class="stats">
+                      <h6 class="mb-0">Torneos Creados</h6> <span>129</span>
+                    </div>
+                    <div class="stats">
+                      <br>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+                    <button class="btn  btn-sm tourney-btn follow">Ver torneos inscritos</button>
+                    <button class="btn tourney-btn btn-sm follow">Ver torneos creados</button>
+                  </div>
+                  <br>
+                  <button class="btn btn-outline-danger btn-sm follow">Cerrar Sesion</button>
+              </div>
+            </div>
+        </div>
+    </div>
+  </ng-template>
+
+
+
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item" >
+        <a class="nav-link" routerLink="/create"><i class="fas fa-plus"></i> New</a>
+      </li>
+  
+  
+    <li class="nav-item">
+      <a class="nav-link" (click)="open(user)"><i class="fas fa-user-circle fa-lg"></i>
+        User</a>
+    </li>
+  </ul>

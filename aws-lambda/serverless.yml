@@ -14,8 +14,8 @@ provider:
         - arn:aws:dynamodb:us-east-1:253879796894:table/Tourney
 
 functions:
-  hello:
-    handler: src/handler.hello
+  handler:
+    handler: src/handler.handler
     events:
       - httpApi:
           path: /

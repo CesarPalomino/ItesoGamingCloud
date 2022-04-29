@@ -1,27 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { User } from 'src/app/interfaces/user.interface';
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  selector: 'app-user-modal',
+  templateUrl: './user-modal.component.html',
+  styleUrls: ['./user-modal.component.css']
 })
-export class ModalComponent implements OnInit {
+export class UserModalComponent implements OnInit {
 
   closeResult = '';
-
-  password: string = '';
-
-  user: User = {
-    correo: '',
-    id: '',
-    image: '',
-    password: '',
-    inscritos: 0,
-    creados: 0,
-    nickname: ''
-  };
 
   constructor(private modalService: NgbModal) { }
 
@@ -44,10 +31,6 @@ export class ModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  createUser() {
-    console.log(this.user)
   }
 
 }
