@@ -147,3 +147,9 @@ a {
     top: -10px;
     right: 220px;
 }
+
+.tourney_btn{
+    color: white;
+    background-color: rgb(19, 51, 110);
+    width: 100px;
+    }
