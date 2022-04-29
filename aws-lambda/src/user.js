@@ -4,15 +4,17 @@ const AWS = require('aws-sdk')
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
 const addUser = async (event) => {
-    const { nick,password, correo,image } = JSON.parse(event.body)
+    const { nick,password, correo,image,inscritos,creados } = JSON.parse(event.body)
     const id = v4()
 
     const user = {
         id,
-        nick,
+        nickname,
         password,
         correo,
-        image
+        image, 
+        inscritos,
+        creados,
     }
 
     await dynamodb.put({
@@ -22,6 +24,10 @@ const addUser = async (event) => {
 
     return {
         statusCode: 200,
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
+          },
         body: JSON.stringify(user)
     }
 
@@ -37,6 +43,10 @@ const getUsers = async (event) => {
 
     return {
         statusCode: 200,
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
+          },
         body: JSON.stringify(users)
     }
 }
@@ -53,6 +63,10 @@ const getUserByID = async (event) => {
 
     return {
         status: 200,
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
+          },
         body: user
     }
 }

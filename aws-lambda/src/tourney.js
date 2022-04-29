@@ -36,6 +36,10 @@ const createTourney = async (event) => {
 
         return {
             statusCode: 200,
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin':'*'
+              },
             body: JSON.stringify(tourney)
         }
 
@@ -59,6 +63,10 @@ const getTourneyByID = async(event) => {
 
     return {
         status: 200,
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
+          },
         body: tourney
     }
 }
@@ -72,6 +80,10 @@ const getTourney = async(event) => {
 
     return {
         statusCode: 200,
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
+          },
         body: JSON.stringify(tourney)
     }
 }

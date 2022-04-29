@@ -1,15 +1,14 @@
 "use strict";
 
-module.exports.hello = async (event) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify(
-      {
-        message: "Hellow There",
-        input: event,
+module.exports.handler = async (event) => {
+  const response = {
+      statusCode: 200,
+      headers: {
+          "Access-Control-Allow-Headers" : "Content-Type",
+          "Access-Control-Allow-Origin": "http://localhost:4200/",
+          "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
       },
-      null,
-      2
-    ),
+      body: JSON.stringify('Hello from Lambda!'),
   };
+  return response;
 };

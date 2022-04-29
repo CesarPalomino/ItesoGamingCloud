@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { User } from 'src/app/interfaces/user.interface';
 
 @Component({
   selector: 'app-modal',
@@ -10,10 +11,22 @@ export class ModalComponent implements OnInit {
 
   closeResult = '';
 
-  constructor(private modalService: NgbModal) {}
+  password: string = '';
+
+  user: User = {
+    correo: '',
+    id: '',
+    image: '',
+    password: '',
+    inscritos: 0,
+    creados: 0,
+    nickname: ''
+  };
+
+  constructor(private modalService: NgbModal) { }
 
   open(content: any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
@@ -31,6 +44,10 @@ export class ModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  createUser() {
+    console.log(this.user)
   }
 
 }
