@@ -12,18 +12,17 @@ export class AuthService {
     private database: DatabaseService
   ) { }
 
-  login(nickname:string, password:string) {
-    this.database.getUserById(nickname, password).subscribe(
-      result => {
-        console.log(result)
-      }
-    )
-    // localStorage.setItem('usuario', JSON.stringify(user));
+  login(usuario: User) {
+    localStorage.setItem('usuario', JSON.stringify(usuario));
   }
 
   isLoged() {
-    let user = localStorage.getItem('user') ? localStorage.getItem('user') : false;
+    let user = localStorage.getItem('usuario') ? localStorage.getItem('usuario') : false;
     return user;
+  }
+
+  getData() {
+    return JSON.parse(localStorage.getItem('usuario')!);
   }
 
   logOut() {

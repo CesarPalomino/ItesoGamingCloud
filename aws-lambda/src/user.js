@@ -42,13 +42,26 @@ const getUsers = async (event) => {
 
     const users = result.Items;
 
-    return {
-        statusCode: 200,
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        },
-        body: JSON.stringify(users)
+    if (users) {
+        return {
+            statusCode: 200,
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
+            },
+            body: JSON.stringify(users)
+        }
+    } else {
+        return {
+            statusCode: 400,
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
+            },
+            body: JSON.stringify(users)
+        }
     }
 }
 
@@ -62,14 +75,24 @@ const getUserByID = async (event) => {
 
     const user = result.Item;
 
-    return {
-        status: 200,
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        },
-        body: user
-    }
+    if (user)
+        return {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            body: user
+        }
+    else
+        return {
+            status: 400,
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            body: user
+        }
 }
 
 module.exports = {

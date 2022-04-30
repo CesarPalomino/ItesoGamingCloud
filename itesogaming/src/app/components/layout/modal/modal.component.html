@@ -11,20 +11,20 @@
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-user"></i></span>
         </div>
-        <input type="text" class="form-control" [(ngModel)]="nickname" placeholder="Nombre de Usuario">
+        <input type="text" class="form-control" [(ngModel)]="nickname" name="nick" placeholder="Nombre de Usuario">
 
       </div>
       <div class="input-group form-group">
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-key"></i></span>
         </div>
-        <input type="password" [(ngModel)]="password" class="form-control" placeholder="Contraseña">
+        <input type="password" [(ngModel)]="password" name="passs" class="form-control" placeholder="Contraseña">
       </div>
       <div class="row align-items-center remember">
         <input type="checkbox">Recordar Contraseña
       </div>
       <div class="form-group">
-        <input type="submit" value="Login" (click)="modal.close('Save click')" class="btn float-right login_btn">
+        <input type="submit" value="Login"  (click)="loginUser()" class="btn float-right login_btn">
       </div>
     </form>
     <br>

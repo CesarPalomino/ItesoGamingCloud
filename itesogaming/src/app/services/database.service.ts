@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Tourney } from '../interfaces/tourney.interface';
 import { User } from '../interfaces/user.interface';
@@ -27,12 +27,8 @@ export class DatabaseService {
 
   //neceista datos
   getUserById(nickname: string, password: string) {
-    let header = new HttpHeaders({
-      nickname: nickname,
-      password: password
-    })
-
-    return this.http.get<User>(this.API + 'getUserByID', { headers: header })
+    let header = new HttpParams().set("nickname", nickname).set("password", password)
+    return this.http.get<any>(this.API + `getUserByID/${{nickname}}/${{password}}`)
   }
 
   //neceita datos

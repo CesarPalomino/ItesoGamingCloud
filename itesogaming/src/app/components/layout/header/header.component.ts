@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,9 @@ import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private auth : AuthService
+  ) { }
 
   active(content: any) {
     
@@ -17,7 +20,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  get isLoged() { return this.auth.isLoged()}
 
 
 }

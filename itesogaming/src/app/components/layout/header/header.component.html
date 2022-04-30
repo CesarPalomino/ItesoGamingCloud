@@ -40,10 +40,10 @@
           
 
           <!-- usuario registrado  -->
-          <app-user-modal></app-user-modal>
+          <app-user-modal [ngStyle]="{'display':isLoged?'block':'none'}"></app-user-modal >
 
           <!-- no registrado-->
-          <app-modal></app-modal>
+          <app-modal [ngStyle]="{'display':!isLoged?'block':'none'}"></app-modal >
         </ul>
       </div>
     </div>
