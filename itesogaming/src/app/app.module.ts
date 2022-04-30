@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './components/layout/modal/modal.component';
 import { TourneyComponent } from './components/tourney/tourney.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserModalComponent } from './components/layout/user-modal/user-modal.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     TourneyCardComponent,
     CreateComponent,
     ModalComponent,
-    TourneyComponent
+    TourneyComponent,
+    UserModalComponent
   ],
   imports: [
     BrowserModule,
