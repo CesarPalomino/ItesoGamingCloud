@@ -18,7 +18,7 @@ const addUser = async (event) => {
     }
 
     await dynamodb.put({
-        TableName: 'Users',
+        TableName: 'Usuarios',
         Item: user
     }).promise()
 
@@ -37,7 +37,7 @@ const addUser = async (event) => {
 const getUsers = async (event) => {
 
     const result = await dynamodb.scan({
-        TableName: 'Users',
+        TableName: 'Usuarios',
     }).promise()
 
     const users = result.Items;
@@ -54,10 +54,10 @@ const getUsers = async (event) => {
 
 const getUserByID = async (event) => {
 
-    const { id } = event.pathParameters;
+    const { nikname, password } = event.pathParameters;
     const result = await dynamodb.get({
-        TableName: 'Users',
-        Key: { "id": id },
+        TableName: 'Usuarios',
+        Key: { "nickname": nikname, "password": password },
     }).promise()
 
     const user = result.Item;

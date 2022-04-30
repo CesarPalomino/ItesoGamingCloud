@@ -10,7 +10,7 @@ provider:
       Action: 
         - dynamodb:*
       Resource:
-        - arn:aws:dynamodb:us-east-1:253879796894:table/Users
+        - arn:aws:dynamodb:us-east-1:253879796894:table/Usuarios
         - arn:aws:dynamodb:us-east-1:253879796894:table/Tourney
 
 functions:
@@ -36,7 +36,7 @@ functions:
     handler: src/user.getUserByID
     events:
       - httpApi:
-          path: /getUserByID/{id}
+          path: /getUserByID/{nikname}/{password}
           method: get
   #Metodos de torneo
   createTourney:
@@ -61,17 +61,22 @@ functions:
 
 resources:
   Resources:
-    Users:
+    Usuarios:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: Users
+        TableName: Usuarios
         BillingMode: PAY_PER_REQUEST
-        AttributeDefinitions: 
-          - AttributeName: id
+        AttributeDefinitions:
+          - AttributeName: nickname
             AttributeType: S
+          - AttributeName: password
+            AttributeType: S    
         KeySchema:
-          - AttributeName: id
+          - AttributeName: nickname
             KeyType: HASH
+          - AttributeName: password
+            KeyType: RANGE
+    
     Tourney:
       Type: AWS::DynamoDB::Table
       Properties:
