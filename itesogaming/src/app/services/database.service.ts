@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Tourney } from '../interfaces/tourney.interface';
 import { User } from '../interfaces/user.interface';
 
 @Injectable({
@@ -21,7 +22,7 @@ export class DatabaseService {
 
   //funciona
   getTourney() {
-    return this.http.get<any[]>(this.API + 'getTourney')
+    return this.http.get<Tourney[]>(this.API + 'getTourney')
   }
 
   //neceista datos

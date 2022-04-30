@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/interfaces/user.interface';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-modal',
@@ -16,14 +17,17 @@ export class ModalComponent implements OnInit {
   user: User = {
     correo: '',
     id: '',
-    image: '',
+    image: 'http://cdn.onlinewebfonts.com/svg/img_227643.png',
     password: '',
     inscritos: 0,
     creados: 0,
     nickname: ''
   };
 
-  constructor(private modalService: NgbModal) { }
+  constructor(
+    private modalService: NgbModal,
+    private database: DatabaseService
+  ) { }
 
   open(content: any) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
@@ -47,7 +51,14 @@ export class ModalComponent implements OnInit {
   }
 
   createUser() {
+    this.user.id = this.createID()
+    this.database.createUser(this.user).subscribe((user) => { console.log(user) })
     console.log(this.user)
+  }
+
+
+  private createID() {
+    return '' + Math.random().toString(36).substr(2, 9);
   }
 
 }

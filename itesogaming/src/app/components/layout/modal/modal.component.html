@@ -72,7 +72,7 @@
           <span class="input-group-text"><i class="fas fa-user"></i></span>
         </div>
         <!-- nombre de usuario -->
-        <input type="mail" [(ngModel)]="user.nickname" class="form-control" placeholder="Nombre de Usuario">
+        <input type="mail" [(ngModel)]="user.nickname" name="user" class="form-control" placeholder="Nombre de Usuario">
 
       </div>
       <div class="input-group form-group">
@@ -80,14 +80,14 @@
           <span class="input-group-text"><i class="fas fa fa-envelope"></i></span>
         </div>
         <!-- correo -->
-        <input type="password" [(ngModel)]="user.correo" class="form-control" placeholder="Correo Electronico">
+        <input type="password" [(ngModel)]="user.correo" name="correo" class="form-control" placeholder="Correo Electronico">
       </div>
       <div class="input-group form-group">
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-key"></i></span>
         </div>
         <!-- contra -->
-        <input type="password" [(ngModel)]="user.password" name="" class="form-control" placeholder="Contraseña">
+        <input type="password" [(ngModel)]="user.password" name="password" class="form-control" placeholder="Contraseña">
       </div>
       <div class="input-group form-group">
         <div class="input-group-prepend">

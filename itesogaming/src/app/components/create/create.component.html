@@ -31,13 +31,8 @@
               </div>
             </div>
             <div class="col-8">
-              <select class="form-control">
-                <option>Elegir Consola...</option>
-                <option>PC</option>
-                <option>Xbox</option>
-                <option>PlayStation</option>
-                <option>Nintendo Switch</option>
-                <option>Otra (Especificar en descripción)</option>
+              <select class="form-control" [(ngModel)]="tourney.plat" name="plat">
+                <option *ngFor="let item of options">{{item}}</option>
               </select>
             </div>
           </div>
@@ -50,8 +45,8 @@
             </div>
             <div class="col-8">
               <div class="form-group">
-                <input type="text" class="form-control formTourney" id="nomTorneo"
-                  placeholder="Ingresa el nombre del torneo..." required>
+                <input type="text" class="form-control formTourney" [(ngModel)]="tourney.nombre" name="nombre"
+                  id="nomTorneo" placeholder="Ingresa el nombre del torneo..." required>
                 <div class="invalid-tooltip">
                   Ingrese un nombre valido
                 </div>
@@ -61,36 +56,40 @@
           <div class="row">
             <div class="col-md-3 mb-3">
               <label># maximo de jugadores</label>
-              <input type="number" class="form-control formTourney" id="numTorneo"
-                placeholder="Ingrese numero de jugadores" required>
+              <input type="number" class="form-control formTourney" id="numTorneo" [(ngModel)]="tourney.cantjug"
+                name="cantjg" placeholder="Ingrese numero de jugadores" required>
               <div class="invalid-tooltip">
                 Ingrese numero de jugadores
               </div>
             </div>
             <div class="col-md-2 mb-3">
               <label>Costo</label>
-              <input type="number" class="form-control formTourney" id="precio" placeholder="Ingrese costo" required>
+              <input type="number" class="form-control formTourney" id="precio" placeholder="Ingrese costo" required
+                [(ngModel)]="tourney.cost" name="cost">
               <div class="invalid-tooltip">
                 Costo del evento
               </div>
             </div>
             <div class="col-md-2 mb-3">
               <label>Fecha de inicio</label>
-              <input type="date" class="form-control formTourney" id="fechaTorneo" required>
+              <input type="date" class="form-control formTourney" id="fechaTorneo" required
+              [(ngModel)]="tourney.fechai" name="date">
               <div class="invalid-tooltip">
                 Ingrese una fecha valida
               </div>
             </div>
             <div class="col-md-3 mb-3">
               <label>Fecha de terminación</label>
-              <input type="date" class="form-control formTourney" id="fechaTorneo" required>
+              <input type="date" class="form-control formTourney" id="fechaTorneo" required
+              [(ngModel)]="tourney.fechaf" name="datef">
               <div class="invalid-tooltip">
                 Ingrese una fecha valida
               </div>
             </div>
             <div class="col-md-2 mb-3">
               <label>Hora</label>
-              <input type="time" class="form-control formTourney" id="horaTorneo" required>
+              <input type="time" class="form-control formTourney" id="horaTorneo" required
+              [(ngModel)]="tourney.hora" name="hora">
               <div class="invalid-tooltip">
                 Ingrese una hora valida
               </div>
@@ -101,9 +100,9 @@
               <form>
                 <div class="form-group">
                   <label for="exampleFormControlFile1">Logo para Torneo</label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1" >
                   <br>
-                  <input type="text" class="form-control formTourney" id="dirTorneo" placeholder="URL" required>
+                  <input type="text" class="form-control formTourney" id="dirTorneo" placeholder="URL" [(ngModel)]="tourney.logo" name="logo" required>
                   <div class="invalid-tooltip">No es valido</div>
                 </div>
               </form>
@@ -123,7 +122,7 @@
           <div class="row">
             <div class="col-md-12 mb-3">
               <label placeholder="Inserte la descripción del evento" required>Descripción del evento</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="tourney.desc" name="desc"></textarea>
               <div class="invalid-tooltip">No es valido</div>
             </div>
           </div>
@@ -131,7 +130,7 @@
             <div class="col-md-10 mb-3">
               <label>Dirección (puedes poner online)</label>
               <input type="text" class="form-control formTourney" id="dirTorneo"
-                placeholder="indique la dirección del torneo (Ubicacion)" required>
+                placeholder="indique la dirección del torneo (Ubicacion)" required [(ngModel)]="tourney.place" name="place">
               <div class="invalid-tooltip">No es valido</div>
             </div>
             <div class="col-md-2 mb-3">
