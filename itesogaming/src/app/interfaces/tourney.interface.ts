@@ -14,6 +14,6 @@ export interface Tourney {
     desc: string,
     tid: string,
     admin: string,
-    status: string,
+    status: boolean,
     logo: string
 }

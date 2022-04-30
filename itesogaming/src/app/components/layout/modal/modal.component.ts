@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/interfaces/user.interface';
+import { AuthService } from 'src/app/services/auth.service';
 import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
@@ -13,6 +14,7 @@ export class ModalComponent implements OnInit {
   closeResult = '';
 
   password: string = '';
+  nickname: string = '';
 
   user: User = {
     correo: '',
@@ -26,7 +28,8 @@ export class ModalComponent implements OnInit {
 
   constructor(
     private modalService: NgbModal,
-    private database: DatabaseService
+    private database: DatabaseService,
+    private auth: AuthService
   ) { }
 
   open(content: any) {
@@ -59,6 +62,10 @@ export class ModalComponent implements OnInit {
 
   private createID() {
     return '' + Math.random().toString(36).substr(2, 9);
+  }
+
+  login() {
+    this.auth.login(this.nickname, this.password)
   }
 
 }
