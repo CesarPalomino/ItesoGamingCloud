@@ -26,9 +26,10 @@ export class DatabaseService {
   }
 
   //neceista datos
-  getUserById(userId: string) {
+  getUserById(nickname: string, password: string) {
     let header = new HttpHeaders({
-      id: userId
+      nickname: nickname,
+      password: password
     })
 
     return this.http.get<User>(this.API + 'getUserByID', { headers: header })

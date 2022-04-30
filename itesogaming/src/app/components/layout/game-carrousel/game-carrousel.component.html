@@ -22,10 +22,10 @@
           <div class="carousel-inner w-100 vv-3" role="listbox">
             <div class="row">
               <div *ngFor="let item of list; let i=index" [ngClass]="(i==0)?'carousel-item active':'carousel-item'">
-                <a href="{{item.link}}" class="game-link" >
-                  <div class="col-md-2 mb-2 games" >
+                <a class="game-link" (click)="casas(item)">
+                  <div class="col-md-2 mb-2 games">
                     <div class="card">
-                      <img class="img-fluid" alt="100%x300" src="{{item.imagen}}">
+                      <img class="img-fluid" alt="100%x300" src="{{item}}" >
                     </div>
                   </div>
                 </a>

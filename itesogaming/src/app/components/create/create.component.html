@@ -19,7 +19,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 ">
-              <app-game-carrousel [title]="juegosName" [list]="juegos"></app-game-carrousel>
+              <app-game-carrousel (newItemEvent)="addItem($event)" [title]="juegosName" [list]="juegos"></app-game-carrousel>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@
             </div>
             <div class="col-md-2 mb-3">
               <label>Hora</label>
-              <input type="time" class="form-control formTourney" id="horaTorneo" required
+              <input type="text" class="form-control formTourney" id="horaTorneo" required
               [(ngModel)]="tourney.hora" name="hora">
               <div class="invalid-tooltip">
                 Ingrese una hora valida
@@ -135,7 +135,7 @@
             </div>
             <div class="col-md-2 mb-3">
               <br>
-              <button id="controlbtnForm" class="btn btn-primary">Crear Torneo</button>
+              <button id="controlbtnForm" class="btn btn-primary" (click)="createTourney()">Crear Torneo</button>
             </div>
           </div>
         </div>
