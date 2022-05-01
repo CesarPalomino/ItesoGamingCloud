@@ -96,7 +96,7 @@ export class ModalComponent implements OnInit {
     console.log(usuario)
     if (usuario.nickname != '') {
       this.auth.login(usuario)
-      this.router.navigate(['home']);
+      this.ngOnInit()
     }
 
     //console.log(this.nickname, this.password)

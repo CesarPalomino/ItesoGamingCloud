@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { User } from 'src/app/interfaces/user.interface';
+import { AuthService } from 'src/app/services/auth.service';
+import { HomeComponent } from '../../home/home.component';
 
 @Component({
   selector: 'app-user-modal',
@@ -8,9 +11,24 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class UserModalComponent implements OnInit {
 
-  closeResult = '';
+  @Output() logoutEvent = new EventEmitter();
 
-  constructor(private modalService: NgbModal) { }
+  closeResult = '';
+  usuario: User ={
+    correo: '',
+    id: '',
+    image: 'http://cdn.onlinewebfonts.com/svg/img_227643.png',
+    password: '',
+    inscritos: 0,
+    creados: 0,
+    nickname: ''
+  };
+
+  constructor(
+    private modalService: NgbModal,
+    private authService: AuthService,
+    //private home: HomeComponent
+  ) { }
 
   open(content: any) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
@@ -31,6 +49,17 @@ export class UserModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getUser()
+  }
+
+  getUser(): void{
+    this.usuario = this.authService.getData();
+    console.log(this.usuario);
+  }
+
+  logout(): void {
+    this.authService.logOut()
+   // this.home.ngOnInit()
   }
 
 }

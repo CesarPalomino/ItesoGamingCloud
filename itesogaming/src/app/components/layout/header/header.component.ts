@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -14,13 +13,9 @@ export class HeaderComponent implements OnInit {
     private auth : AuthService
   ) { }
 
-  active(content: any) {
-    
-   }
-
   ngOnInit(): void {
   }
-  get isLoged() { return this.auth.isLoged()}
 
+  get isLoged() { return this.auth.isLoged()}
 
 }
