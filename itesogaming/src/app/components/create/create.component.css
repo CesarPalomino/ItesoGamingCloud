@@ -3,7 +3,7 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 
 
 
-.page-header { background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(https://scontent-qro1-1.xx.fbcdn.net/v/t1.6435-9/30742069_10156549708754905_2339310592680001536_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8631f5&_nc_ohc=DW3HVmTRz20AX-T2a69&_nc_ht=scontent-qro1-1.xx&oh=00_AT8gEMd-hrG14L_8BGShoi5_BT98jZzZSlVA6jLWvnPt0g&oe=62692B23)no-repeat; position: relative; background-position-y: center; ; background-size: cover; max-height: 720px; }
+.page-header { background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(https://scontent-qro1-1.xx.fbcdn.net/v/t1.6435-9/30742069_10156549708754905_2339310592680001536_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8631f5&_nc_ohc=BT4YVqDZUqkAX8sCTOb&_nc_ht=scontent-qro1-1.xx&oh=00_AT8zL4zl97Zo4_GplzSE3H0hfMN2qP1rlQwvPX_22src0w&oe=6294ACA3)no-repeat; position: relative; background-position-y: center; ; background-size: cover; max-height: 720px; }
 .page-caption { padding-top: 120px; padding-bottom: 110px; }
 .display-4 { font-size: 65px; line-height: 1; color: #fff;; text-align: center; }
 

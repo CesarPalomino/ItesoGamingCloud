@@ -49,7 +49,8 @@ export class CreateComponent implements OnInit {
     'PC',
     'Xbox',
     'PlayStation',
-    'Nintendo Switch'
+    'Nintendo Switch',
+    'Otro'
   ]
 
   tourney: Tourney = {
