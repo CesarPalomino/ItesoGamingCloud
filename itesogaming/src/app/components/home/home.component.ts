@@ -65,11 +65,21 @@ export class HomeComponent implements OnInit {
   tourney: any[] = []
 
   ngOnInit(): void {
+    this.getUsers();
     this.getTourneys();
   }
 
 
-  
+  getUsers() {
+    this.service.getAllUsers().subscribe(
+      {
+        next: (response: User[]) => {
+          console.log("usuarios: ", response)
+          this.users = response
+        }
+      }
+    )
+  }
 
   getTourneys() {
     this.service.getTourney().subscribe(

@@ -11,6 +11,7 @@ export class CardCarrouselComponent implements OnInit {
 
   @Input() list:any
 
+
   
   constructor() { }
 
@@ -18,7 +19,7 @@ export class CardCarrouselComponent implements OnInit {
     
   }
 
-  ngAfterViewInit(): void{
+  ngAfterContentChecked(): void{
     let _ide=this.dataCarr.ide;
     (function ($) {
       //$('#carouselExampleIndicators{{dataCarr.ide}}.carousel .carousel-item').each(function (_:any,element:any) {
@@ -29,7 +30,7 @@ export class CardCarrouselComponent implements OnInit {
             next = $(element).siblings(':first');
         }
         next.children(':first-child').clone().appendTo($(element));
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 6; i++) {
             next = next.next();
             if (!next.length) {
                 next = $(element).siblings(':first');
