@@ -61,7 +61,7 @@ export class SearchComponent implements OnInit {
   tourney: any[] = []
 
   ngOnInit(): void {
-
+    this.getTourneys();
   }
 
   getTourneys() {
