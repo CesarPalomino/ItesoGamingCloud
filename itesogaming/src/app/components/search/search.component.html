@@ -86,17 +86,8 @@
           <h3 class="font-weight-light"><b>Todos los eventos</b></h3>
         </div>
       </div>
-      <div class="col-12">
-        <app-tourney-card [tourney]="xd"></app-tourney-card>
-        <app-tourney-card [tourney]="maincra"></app-tourney-card>
-        <app-tourney-card [tourney]="dragon"></app-tourney-card>
-        <app-tourney-card [tourney]="mortal"></app-tourney-card>
-        <app-tourney-card [tourney]="smash"></app-tourney-card>
-        <app-tourney-card [tourney]="sus"></app-tourney-card>
-        <app-tourney-card [tourney]="return"></app-tourney-card>
-        <app-tourney-card [tourney]="rock"></app-tourney-card>
-        <app-tourney-card [tourney]="rugal"></app-tourney-card>
-        <app-tourney-card [tourney]="melee"></app-tourney-card>
+      <div class="col-12" *ngFor="let item of tourneylist; let i=index">
+        <app-tourney-card [tourney]="item"></app-tourney-card>
       </div>
       <!--
       <div class="col-12 align-items-center">
