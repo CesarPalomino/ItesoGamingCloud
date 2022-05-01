@@ -1,4 +1,5 @@
-<div class="page-header" style="url(xd.image)no-repeat">
+<div class="page-header"
+  style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('{{tourney.image}}') ">
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -17,29 +18,36 @@
     <div class="px-4 pt-0 pb-4 cover">
       <div class="media align-items-end profile-head">
 
-        <div class="profile mr-3"><img src="xd.logo" alt="..." width="130"
-            class="rounded-circle mb-2 img-thumbnail"><a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit
-            Tourney</a></div>
+        <div class="profile mr-3"><img src={{tourney.logo}} alt="..." width="130"
+            class="rounded-circle mb-2 img-thumbnail">
+          <!-- <a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit
+            Tourney</a> -->
+        </div>
         <div class="media-body mb-5">
-          <h1 class="display-4"><b>{{xd.nombre}}</b></h1>
+          <h1 class="display-4"><b>{{tourney.nombre}}</b></h1>
           <h4 class="card-title"><i
-              [ngClass]="(xd.plat=='PC')?'fas fa-desktop':((xd.plat=='Xbox')?'fab fa-xbox':((xd.plat=='PlayStation')?'fab fa-playstation':((xd.plat=='Nintendo')?'bi bi-nintendo-switch':'fa fa-gamepad')))"></i>
-              {{xd.juego}}</h4>
+              [ngClass]="(tourney.plat=='PC')?'fas fa-desktop':((tourney.plat=='Xbox')?'fab fa-xbox':((tourney.plat=='PlayStation')?'fab fa-playstation':((tourney.plat=='Nintendo')?'bi bi-nintendo-switch':'fa fa-gamepad')))"></i>
+            {{tourney.juego}}</h4>
         </div>
       </div>
     </div>
-    <span [ngClass]="(xd.status=='Disponible')?'badge badge-pill badge-primary img-spam':((xd.status=='Terminado')?'badge badge-pill badge-danger img-spam':'badge badge-pill badge-success img-spam')">{{xd.status}}</span>
+    <span
+      [ngClass]="(tourney.status)?'badge badge-pill badge-primary img-spam':((tourney.status==false)?'badge badge-pill badge-danger img-spam':'badge badge-pill badge-success img-spam')">{{tourney.status}}</span>
     <div class="col-md-10 mx-auto">
       <div class="card-block bg-white mb30">
         <div class="bg-light t-info p-4 d-flex justify-content-end text-center">
           <ul class="list-inline mb-0">
             <li class="list-inline-item">
-              <h5 class="font-weight-bold mb-0 d-block">{{xd.cantjug}}/{{xd.limit}</h5><small class="text-muted"> <i
-                  class="fas fa-user mr-1"></i>Jugadores</small>
+              <h5 class="font-weight-bold mb-0 d-block">
+                {{tourney.cantjug}}/{{tourney.limit}}
+              </h5>
+              <small class="text-muted"> <i class="fas fa-user mr-1"></i>Jugadores</small>
             </li>
             <li class="list-inline-item">
-              <h5 class="font-weight-bold mb-0 d-block">{{(xd.costo==0)? "Entrada Gratis" : "Costo de Inscripción: $"+(xd.xd | number)}} </h5><small class="text-muted"> <i
-                  class="fas fa-dollar-sign mr-1"></i>Inscripción</small>
+              <h5 class="font-weight-bold mb-0 d-block">
+                {{ print(tourney)}}
+              </h5><small class="text-muted">
+                <i class="fas fa-dollar-sign mr-1"></i> Inscripción </small>
             </li>
             <li class="list-inline-item">
               <input type="submit" value="Inscribirse" class="btn float-right login_btn">
@@ -53,9 +61,10 @@
         <h4 class="mb-0">Información del Torneo</h4>
         <div class="p-4 rounded shadow-sm bg-light">
           <div class="col-md-11 mx-auto">
-            <p class="font-italic mb-0">{{(xd.fechaI==xd.fechaF)? xd.fechaI : xd.fechaI +" - "+ xd.fechaF}}</p>
-            <p class="font-italic mb-0">{{xd.hora}} horas</p>
-            <p class="font-italic mb-0">Ubicación: {{xd.place}}</p>
+            <p class="font-italic mb-0">{{(tourney.fechai==tourney.fechaf)? tourney.fechai : tourney.fechai +" - "+
+              tourney.fechaf}}</p>
+            <p class="font-italic mb-0">{{tourney.hora}} horas</p>
+            <p class="font-italic mb-0">Ubicación: {{tourney.place}}</p>
           </div>
           <br>
           <p class="card-text"><b>Organizador</b></p>
@@ -64,22 +73,26 @@
             <img style="width: 40px; height: 40px; margin-left: 40px; margin-top: 8px;"
               src="https://randomuser.me/api/portraits/men/4.jpg" class="mr-4 rounded-circle" alt="...">
             <div class="media-body border-1" style="margin-top: 13px;">
-              <h4 class="mt-0">{{xd.admin}</h4>
+              <h4 class="mt-0">{{tourney.admin}}</h4>
             </div>
           </div>
           <!--/usuario-->
           <br>
           <p class="card-text"><b>Descripción</b></p>
           <div class="col-md-10 mx-auto text-muted">
-            <p class="card-text">{{xd.desc}</p>
+            <p class="card-text">{{tourney.desc}}</p>
           </div>
         </div>
         <br>
-        <h4 class="mb-0">Jugadores Inscritos</h4>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <h4 class="mb-0">Jugadores Inscritos</h4>
         <div class="row justify-content-center">
           <div class="scrollbar" id="style-1">
-            <div *ngFor="let item of xd.gamelist; let i=index" class="force-overflow">
-              <!--usuario-->
+            <div *ngFor="let item of tourney.gamelist; let i=index" class="force-overflow">
               <div class="media">
                 <img style="width: 40px; height: 40px; margin-left: 40px; margin-top: 8px;"
                   src="https://randomuser.me/api/portraits/men/4.jpg" class="mr-4 rounded-circle" alt="...">
@@ -87,11 +100,7 @@
                   <h4 class="mt-0">{{item.jugador} </h4>
                 </div>
               </div>
-              <!--/usuario-->
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+      </div> -->
