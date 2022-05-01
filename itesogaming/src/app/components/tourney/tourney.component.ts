@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tourney } from 'src/app/interfaces/tourney.interface';
+import { TourneyService } from 'src/app/services/tourney.service';
 
 @Component({
   selector: 'app-tourney',
@@ -33,11 +35,21 @@ export class TourneyComponent implements OnInit {
         "jugador": 10002
       }
     ]
-}
+  }
 
-  constructor() { }
+  get tourney(): Tourney { return this.tourneyService.tourney }
+
+  constructor(
+    private tourneyService: TourneyService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+
+  print(tourney: any) {
+    if (tourney.cost == 0) return "Entrada Gratis"
+    return "Costo de Inscripción:" + tourney.cost
   }
 
 }
