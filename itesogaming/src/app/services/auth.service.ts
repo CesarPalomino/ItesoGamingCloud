@@ -22,7 +22,10 @@ export class AuthService {
   }
 
   getData() {
-    return JSON.parse(localStorage.getItem('usuario')!);
+    if (localStorage.getItem('usuario') != null) {
+      return JSON.parse(localStorage.getItem('usuario')!);
+    }
+    return false;
   }
 
   logOut() {
