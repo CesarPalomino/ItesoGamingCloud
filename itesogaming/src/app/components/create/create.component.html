@@ -56,7 +56,7 @@
           <div class="row">
             <div class="col-md-3 mb-3">
               <label># maximo de jugadores</label>
-              <input type="number" class="form-control formTourney" id="numTorneo" [(ngModel)]="tourney.cantjug"
+              <input type="number" class="form-control formTourney" id="numTorneo" [(ngModel)]="tourney.limit"
                 name="cantjg" placeholder="Ingrese numero de jugadores" required>
               <div class="invalid-tooltip">
                 Ingrese numero de jugadores
@@ -113,7 +113,7 @@
                   <label for="exampleFormControlFile1">Banner para Torneo</label>
                   <!--<input type="file" class="form-control-file" id="exampleFormControlFile1">
                   <br>-->
-                  <input type="text" class="form-control formTourney" id="dirTorneo" placeholder="URL" required>
+                  <input type="text" class="form-control formTourney" id="dirTorneo" [(ngModel)]="tourney.image" name="banner" placeholder="URL" required>
                   <div class="invalid-tooltip">No es valido</div>
                 </div>
               </form>

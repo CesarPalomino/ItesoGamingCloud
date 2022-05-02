@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Tourney } from 'src/app/interfaces/tourney.interface';
 import { DatabaseService } from 'src/app/services/database.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -75,18 +76,25 @@ export class CreateComponent implements OnInit {
 
   constructor(
     private database: DatabaseService,
-    private route: Router
+    private auth: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
   createTourney(): void {
+    
+    this.tourney.image = this.tourney.logo;
+    let user = this.auth.getData();
+    this.tourney.admin = user.nickname
     console.log(this.tourney)
     this.database.createTourney(this.tourney).subscribe( result => {console.log(result)})
-    this.route.navigate(['home'])
+    this.router.navigate(['home'])
   }
+
   addItem(newItem: string) {
     this.tourney.image = newItem;
   }
+
 }

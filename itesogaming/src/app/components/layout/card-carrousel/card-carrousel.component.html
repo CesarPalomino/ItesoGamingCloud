@@ -24,8 +24,8 @@
                   <div class="carousel-inner w-100 vv-3" role="listbox">
                     <div class="row">
                       <div *ngFor="let item of list; let i=index" [ngClass]="(i==0)?'carousel-item active':'carousel-item'">
-                        <div class="col-md-3 mb-3">
-                          <a href="{{item.link}}">
+                        <div class="col-md-3 mb-3" >
+                          <a (click)="setData(item)">
                             <div class="card">
                               <img class="img-fluid" alt="100%x300" src="{{item.image}}">
                               <div class="card-body">

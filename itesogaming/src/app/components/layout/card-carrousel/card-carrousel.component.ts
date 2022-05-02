@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { TourneyService } from 'src/app/services/tourney.service';
 declare var jQuery:any;
 
 @Component({
@@ -13,7 +15,10 @@ export class CardCarrouselComponent implements OnInit {
 
 
   
-  constructor() { }
+  constructor(
+    private  service:TourneyService,
+    private route: Router
+  ) { }
 
   ngOnInit(): void {   
     
@@ -40,4 +45,12 @@ export class CardCarrouselComponent implements OnInit {
       });
     })(jQuery)
   }
+
+  setData(tourney:any): void{
+    console.log('setData', tourney)
+    this.service.setTourney(tourney)
+    this.route.navigate(['tourney'])
+  }
+
+
 }
